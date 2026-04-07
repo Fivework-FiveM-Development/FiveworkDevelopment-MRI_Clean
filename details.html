@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes Técnicos - Fivework Development</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .details-container { padding-top: 120px; padding-bottom: 80px; }
+        .tech-card { background: var(--bg-card); border-radius: 20px; padding: 40px; margin-bottom: 40px; border: 1px solid rgba(255,255,255,0.05); }
+        .tech-card h2 { color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        .tech-card p { color: var(--text-muted); margin-bottom: 20px; }
+        .script-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; list-style: none; }
+        .script-item { background: rgba(255,255,255,0.03); padding: 10px 15px; border-radius: 8px; font-size: 0.85rem; border-left: 3px solid var(--primary); }
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: rgba(0,0,0,0.2); border-radius: 10px; overflow: hidden; }
+        th, td { text-align: left; padding: 15px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        th { background: rgba(255,0,0,0.1); color: var(--primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        tr:hover { background: rgba(255,255,255,0.02); }
+        
+        .category-tag { background: var(--primary); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; margin-bottom: 30px; transition: var(--transition); }
+        .back-link:hover { color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Fivework Logo">
+                <span>Fivework Development</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="index.html#features">Funcionalidades</a></li>
+                    <li><a href="index.html#store">Loja</a></li>
+                    <li><a href="#commands">Comandos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="details-container container">
+        <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i> Voltar para Início</a>
+        
+        <div class="section-title" style="text-align: left; margin-bottom: 40px;">
+            <h1>Demonstração <span class="highlight">Técnica</span></h1>
+            <p>Visão aprofundada sobre a infraestrutura e recursos do servidor.</p>
+        </div>
+
+        <!-- 1. Framework MRI QBOX -->
+        <div class="tech-card">
+            <h2><i data-lucide="cpu"></i> 1. Framework: MRI QBOX</h2>
+            <p>O servidor utiliza o framework <strong>QBox Project (qbx_core)</strong> como núcleo. É uma infraestrutura moderna e modular que supera o antigo QBCore em performance e segurança. A integração <strong>MRI</strong> adiciona uma camada de estabilidade e recursos da "Série Q", desenvolvidos para maximizar a experiência de jogo sem comprometer o <strong>Resmon</strong>.</p>
+            <div class="script-list">
+                <div class="script-item">qbx_core (Nucleo)</div>
+                <div class="script-item">qbx_management (Gestiva)</div>
+                <div class="script-item">qbx_properties (Moradias)</div>
+                <div class="script-item">qbx_vehicleshop (Loja)</div>
+                <div class="script-item">qbx_bankrobbery (Roubos)</div>
+                <div class="script-item">qbx_idcard (Documentos)</div>
+            </div>
+        </div>
+
+        <!-- 2. Scripts Autorais Fivework -->
+        <div class="tech-card" style="border-color: var(--primary);">
+            <h2><i data-lucide="award"></i> 2. Scripts Autorais: Fivework</h2>
+            <p>Estes são os sistemas desenvolvidos e mantidos exclusivamente pela nossa equipe para proporcionar recursos inéditos ao servidor.</p>
+            <div class="features-grid" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div class="feature-card" style="padding: 20px;">
+                    <h3>Fivework Combat</h3>
+                    <p style="font-size: 0.9rem;">Gerenciamento de danos realista e sistema de Sling (armas visíveis no corpo) que sincroniza perfeitamente com o inventário Ox.</p>
+                </div>
+                <div class="feature-card" style="padding: 20px;">
+                    <h3>Fivework Shop</h3>
+                    <p style="font-size: 0.9rem;">Loja de moedas (Coins) integrada com API de pagamento externa e entrega automática in-game via banco de dados.</p>
+                </div>
+                <div class="feature-card" style="padding: 20px;">
+                    <h3>Horários de Assalto</h3>
+                    <p style="font-size: 0.9rem;">Sistema inteligente de controle de horários (In-Game) por região, impedindo roubos fora de janelas específicas.</p>
+                </div>
+                <div class="feature-card" style="padding: 20px;">
+                    <h3>NPWD CityHall App</h3>
+                    <p style="font-size: 0.9rem;">Aplicativo customizado dentro do smartphone NPWD para solicitação de licenças, empregos e serviços públicos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Conteúdo da Base -->
+        <div class="tech-card">
+            <h2><i data-lucide="layers"></i> 3. Conteúdo da Base (Categorizado)</h2>
+            <p>Total de scripts organizados por categorias para fácil manutenção.</p>
+            
+            <h4 style="margin: 20px 0 10px; color: var(--primary);">[mri] - Série Q & Utilidades</h4>
+            <div class="script-list">
+                <div class="script-item">mri_Qbackpack (Mochilas)</div>
+                <div class="script-item">mri_Qpets (Animais)</div>
+                <div class="script-item">mri_Qjobcenter (Empregos)</div>
+                <div class="script-item">mri_Qcrafting (Bancadas)</div>
+                <div class="script-item">mri_Qminigames (Diversos)</div>
+                <div class="script-item">mri_Qsafezones (Zonas)</div>
+            </div>
+
+            <h4 style="margin: 30px 0 10px; color: var(--primary);">[standalone] & Addons</h4>
+            <div class="script-list">
+                <div class="script-item">illenium-appearance</div>
+                <div class="script-item">ps-hud (Modern HUD)</div>
+                <div class="script-item">Renewed-Weathersync</div>
+                <div class="script-item">pma-voice (VOIP)</div>
+                <div class="script-item">gabz_sheriff (Mapa)</div>
+                <div class="script-item">fibv (Mapa Federal)</div>
+            </div>
+        </div>
+
+        <!-- 4. Foco do Projeto -->
+        <div class="tech-card">
+            <h2><i data-lucide="target"></i> 4. Foco do Projeto</h2>
+            <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="margin-bottom: 10px;">Performance (Resmon)</h3>
+                    <p>O foco principal é manter o consumo do servidor abaixo de 1.0ms em situações normais, garantindo que jogadores com PCs limitados tenham uma boa experiência.</p>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <h3 style="margin-bottom: 10px;">Imersão Hard RP</h3>
+                    <p>Economia balanceada e sistemas de interação que forçam o jogador a interpretar o personagem em vez de apenas "farmar" dinheiro.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comandos Section -->
+        <div id="commands" class="tech-card">
+            <h2><i data-lucide="terminal"></i> Lista de Comandos</h2>
+            
+            <h3 style="margin-top: 30px; font-size: 1.2rem;">👨‍💻 Comandos Administrativos (Staff)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comando</th>
+                        <th>Descrição</th>
+                        <th>Permissão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>/admin</td><td>Abre o menu administrativo principal</td><td><span class="category-tag">Admin</span></td></tr>
+                    <tr><td>/tp [id]</td><td>Teleporta para um jogador</td><td><span class="category-tag">Staff</span></td></tr>
+                    <tr><td>/tpm</td><td>Teleporta para o marcador no mapa</td><td><span class="category-tag">Staff</span></td></tr>
+                    <tr><td>/car [modelo]</td><td>Spawna um veículo</td><td><span class="category-tag">Staff</span></td></tr>
+                    <tr><td>/dv</td><td>Deleta veículo próximo</td><td><span class="category-tag">Staff</span></td></tr>
+                    <tr><td>/givemoney</td><td>Dá dinheiro a um jogador</td><td><span class="category-tag">Admin</span></td></tr>
+                    <tr><td>/setjob</td><td>Define o emprego de um ID</td><td><span class="category-tag">Admin</span></td></tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 50px; font-size: 1.2rem;">👤 Comandos de Jogador (Geral)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Comando</th>
+                        <th>Descrição</th>
+                        <th>Uso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>/ooc [msg]</td><td>Chat Global Fora de Personagem</td><td>Geral</td></tr>
+                    <tr><td>/me [ação]</td><td>Descreve uma ação local</td><td>RP</td></tr>
+                    <tr><td>/id</td><td>Mostra seu ID atual</td><td>Geral</td></tr>
+                    <tr><td>/job</td><td>Mostra seu emprego e cargo</td><td>Geral</td></tr>
+                    <tr><td>/gang</td><td>Mostra sua organização atual</td><td>RP</td></tr>
+                    <tr><td>/photomode</td><td>Ativa o modo fotografia</td><td>Social</td></tr>
+                    <tr><td>/vol [0-100]</td><td>Ajusta volume da voz</td><td>pma-voice</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fivework Development. Detalhes Técnicos da Base Clean.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
